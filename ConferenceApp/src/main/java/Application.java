@@ -1,4 +1,5 @@
 import com.example.AppConfig;
+import com.example.model.Guest;
 import com.example.service.SpeakerService;
 import com.example.service.SpeakerServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,6 +13,8 @@ public class Application {
         ApplicationContext ctx = new AnnotationConfigApplicationContext(AppConfig.class);
 
         SpeakerService speakerService = ctx.getBean(SpeakerService.class);
+        Guest guest = ctx.getBean(Guest.class);
+        System.out.println(guest);
         System.out.println(speakerService.findAll().get(0).getfName() + " " + speakerService.findAll().get(0).getlName());
     }
 }

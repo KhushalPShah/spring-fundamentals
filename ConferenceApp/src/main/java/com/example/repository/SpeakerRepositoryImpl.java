@@ -1,10 +1,12 @@
 package com.example.repository;
 
 import com.example.model.Speaker;
+import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
 import java.util.List;
 
+@Repository
 public class SpeakerRepositoryImpl implements SpeakerRepository {
 
     public List<Speaker> findAll() {
